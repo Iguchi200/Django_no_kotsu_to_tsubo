@@ -1,10 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-
-from helloworldproject.views import helloworldfunc, HelloWorldClass
+from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("helloworldurl/", helloworldfunc),
-    path("helloworldurl2/", HelloWorldClass.as_view()),
+    path("", include("helloworldapp.urls")),
 ]
