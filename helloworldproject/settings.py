@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "blogpost.apps.BlogpostConfig",
     "helloworldapp.apps.HelloworldappConfig",
     "django.contrib.admin",
     "django.contrib.auth",
