@@ -120,4 +120,7 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# メディアファイルが保存されている場所
 MEDIA_ROOT = BASE_DIR / "media"
+# メディアファイルへのURLを定義する
+MEDIA_URL = "/media/"
