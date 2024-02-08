@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.shortcuts import render, redirect
 
+from reviewpost.models import ReviewModel
+
 def signupview(request):
   if request.method == "POST":
     username_data = request.POST["username_data"]
@@ -27,3 +29,7 @@ def loginview(request):
     else:
       return redirect("login")
   return render(request, "login.html", {})
+
+def listview(request):
+  object_list = ReviewModel.objects.all()
+  return render(request, "list.html", {"object_list": object_list})
