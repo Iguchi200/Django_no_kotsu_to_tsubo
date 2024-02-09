@@ -125,3 +125,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MEDIA_ROOT = BASE_DIR / "media"
 # メディアファイルへのURLを定義する
 MEDIA_URL = "/media/"
+
+# ログインしていない場合に遷移させるURL
+LOGIN_URL = "/login/"
