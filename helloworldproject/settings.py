@@ -128,3 +128,6 @@ MEDIA_URL = "/media/"
 
 # ログインしていない場合に遷移させるURL
 LOGIN_URL = "/login/"
+
+# ログイン処理を実行して認証されたときに飛ぶ先のURL
+LOGIN_REDIRECT_URL = "admin:index"
