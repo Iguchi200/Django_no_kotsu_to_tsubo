@@ -1,6 +1,6 @@
 from django.urls import path
 
-from reviewpost.views import signupview, loginview, listview, detailview, CreateClass, logoutview
+from reviewpost.views import signupview, loginview, listview, detailview, CreateClass, logoutview, evaluationview
 
 urlpatterns = (
   [
@@ -9,6 +9,7 @@ urlpatterns = (
     path("list/", listview, name="list"),
     path("detail/<int:pk>/", detailview, name="detail"),
     path("create/", CreateClass.as_view(), name="carate"),
-    path("logout/", logoutview, name="logout")
+    path("logout/", logoutview, name="logout"),
+    path("evaluation/<int:pk>", evaluationview, name="evaluation"),
   ]
 )
