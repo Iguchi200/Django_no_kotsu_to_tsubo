@@ -9,5 +9,5 @@ class ReviewModel(models.Model):
   author = models.ForeignKey(User, on_delete=models.CASCADE)
   images = models.ImageField(upload_to="")
   useful_review = models.IntegerField(null=True, blank=True, default=0)
-  userful_review_record = models.TextField()
+  useful_review_record = models.TextField()
   evaluation = models.CharField(max_length=10, choices=EVALUATION_CHOICES)
